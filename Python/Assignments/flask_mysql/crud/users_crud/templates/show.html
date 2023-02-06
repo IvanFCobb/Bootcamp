@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet 2" href="/static/css/style.css">
+    <title>Show</title>
+</head>
+<body class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 p-0 d-flex justify-content-between align-items-center">
+                <h1 class="header" class="mb-3">User {{user.id}}</h1>
+                <a href="/">Home</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 p-3 borderer">
+                <p>Full Name: {{user.first_name}} {{user.last_name}}</p>
+                <p>Email: {{user.email}}</p>
+                <p>Created On: {{user.created_at}}</p>
+                <p>Last Updated: {{user.updated_at}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center">
+                <form class="form" action="/{{user.id}}/edit" method="POST">
+                    <div class="form-group">
+                        <input class="btn btn-link" type="submit" value="Edit">
+                    </div>
+                </form> 
+                <span>|</span>
+                <form class="form" action="/{{user.id}}/delete" method="POST">
+                    <div class="form-group">
+                        <input class="btn btn-link" type="submit" value="Delete">
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

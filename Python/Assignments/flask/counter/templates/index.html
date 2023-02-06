@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="static/css/bootstrap.css">
+    <title>Counter</title>
+</head>
+<body>
+    <h1 class="text-center">Counter</h1>
+    <h3 class="text-center">{{session['count']}}</h3>
+    <div class="text-center">
+        <a class="btn btn-primary text-center mx-2" href="/count">Click</a> 
+        <a class="btn btn-danger text-center mx-2" href="/destroy_session">Reset</a>  
+    </div>
+    <script src="static/js/bootstrap.js"></script>
+</body>
+</html>

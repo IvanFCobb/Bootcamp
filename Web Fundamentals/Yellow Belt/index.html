@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Succulent Shop</title>
+    <link rel="stylesheet" href="style.css" >
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="page-container">
+
+      <!-- Nav Bar  ***********-->
+
+      <div id="nav-bar">
+        <img
+          class="icon"
+          id="leaf-icon"
+          src="assets/leaf.png"
+          alt="leaf icon"
+        >
+        <h1>EasyBay</h1>
+        <input
+          type="search"
+          name="search-bar"
+          id="search"
+          placeholder="    Search for anything"
+          size="70"
+        >
+        <a class="content-link" id="sign-in" href="">Sign In</a>
+        <img
+          id="cart-icon"
+          class="icon"
+          src="assets/cart-dark.png"
+          alt="shopping cart"
+          onclick="alert('Your cart is empty!')"
+        >
+      </div>
+      <div id="link-bar">
+        <ul>
+          <li><a class="content-link" href="">Aeonium</a></li>
+          <li><a class="content-link" href="">Andormischus</a></li>
+          <li><a class="content-link" href="">Agave</a></li>
+          <li><a class="content-link" href="">Aloe</a></li>
+          <li><a class="content-link" href="">Anacampseros</a></li>
+          <li><a class="content-link" href="">Aristaloe</a></li>
+          <li><a class="content-link" href="">More...</a></li>
+        </ul>
+      </div>
+      <h3 id="content-header">Your Source for Serious Succulent Specialties</h3>
+      <div id="main-cotnent-container">
+
+        <!-- Main Content ***********-->
+
+        <div id="row1">
+          <div id="description-box">
+            <p id="description">
+              Discover succ- ulent varieties one pot or rack at a time!
+            </p>
+            <div class="link-arrow-container">
+              <a class="content-link" id="discover-link" href="">Discover</a
+              ><img class="arrow" src="assets/arrow-light.png" alt="arrow" >
+            </div>
+          </div>
+          <img
+            id="discover-image"
+            src="assets/succulents-1.jpg"
+            alt="image of succulent"
+            onmouseover="altImageOn('#discover-image');"
+            onmouseleave="altImageOff('#discover-image');"
+          >
+          <div class="highlighted-plant">
+            <img
+              id="highlighted-image"
+              src="assets/aloe-m.jpg"
+              alt="aloe plant"
+            >
+            <div id="highlighted-plant-link">
+              <a class="content-link" id="highlighted-link" href=""
+                >Soothing Aloe</a
+              ><img class="arrow" src="assets/arrow-light.png" alt="arrow" >
+            </div>
+          </div>
+        </div>
+
+        <!-- Plant Links ***********-->
+
+        <div id="plant-links-container">
+          <div class="plant-links">
+            <img
+              class="plant-link-img"
+              src="assets/aeonium-s.jpg"
+              alt="aeonium image"
+            >
+            <a class="content-link" href="">Aeonium</a>
+          </div>
+          <div class="plant-links">
+            <img
+              class="plant-link-img"
+              src="assets/aloe-s.jpg"
+              alt="aloe image"
+            >
+            <a class="content-link" href="">Aloe</a>
+          </div>
+          <div class="plant-links">
+            <img
+              class="plant-link-img"
+              src="assets/cactus-s.jpg"
+              alt="cactus image"
+            >
+            <a class="content-link" href="">Cactus</a>
+          </div>
+          <div class="plant-links">
+            <img
+              class="plant-link-img"
+              src="assets/echeveria-s.jpg"
+              alt="echeveria image"
+            >
+            <a class="content-link" href="">Echeveria</a>
+          </div>
+          <div class="plant-links">
+            <img
+              class="plant-link-img"
+              src="assets/sedum-s.jpg"
+              alt="sedum image"
+            >
+            <a class="content-link" href="">Sedum</a>
+          </div>
+          <div class="plant-links">
+            <img
+              class="plant-link-img"
+              src="assets/sempervivum-s.jpg"
+              alt="sempervivum image"
+            >
+            <a class="content-link" href="">Sempervivum</a>
+          </div>
+        </div>
+        
+        <!-- Alert Box ***********-->
+
+        <div id="alert-box">
+          <img src="assets/alert-dark.png" alt="alert image" >
+          <p id="alert-text">
+            This site makes use of third-party cookies, by clicking "I Accept"
+            you agree to the terms outlined in our <a href="">cookie policy</a>
+          </p>
+          <button id="accept-button" onclick="removeElement('#alert-box')">
+            I Accept
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

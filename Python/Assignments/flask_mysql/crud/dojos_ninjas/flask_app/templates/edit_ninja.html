@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static\css\bootstrap.css">
+    <link rel="stylesheet 2" href="/static/css/style.css">
+    <title>New Ninja</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-6 d-flex justify-content-between align-items-center">
+                <h1 class="m-1">Update Ninja</h1>
+                <a href="/dojos">Home</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form" action="/update_ninja/{{ninja.id}}" method="POST">
+                    <label for="dojo">Dojo:</label>
+                    <select class="form-control" name="dojo_id" required>
+                        {% for one_dojo in all_dojos %}
+                        <option value={{one_dojo.id}}>{{one_dojo.name}}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="fname">First Name:</label>
+                    <input class="form-control" type="text" name="fname" value="{{ninja.first_name}}" required>
+                    <label for="lname">Last Name:</label>
+                    <input class="form-control" type="text" name="lname" value="{{ninja.last_name}}" required>
+                    <label for="age" >age</label>
+                    <input class="form-control" type="age" name="age" value="{{ninja.age}}" required>
+                    <div class="form-group mt-5">
+                    <input class="form-control btn btn-primary" type="submit" value="Update">
+                </form>
+                <a href="/dojos/{{ninja.dojos_id}}">Back To Dojo</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

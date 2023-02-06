@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Likes</title>
+  </head>
+  <body>
+    <div id="nav-bar"><h2 class="network">Network</h2></div>
+    <h1>Your Feed</h1>
+    <div id="content">
+      <div class="side-bar">
+        <div id="user">
+          <img
+            class="profile-pic"
+            src="/3 Likes/assets/user-circle.png"
+            alt=""
+          />
+          <a href="https://www.google.com/" target="_blank">Add an avatar</a>
+          <h2 class="user-name">James Doe</h2>
+        </div>
+      </div>
+      <div id="feed">
+        <div class="post">
+          <div class="post-header">
+            <h2 class="feed-names">Neil M</h2>
+            <h3 id="like-count-1" class="like-count">9 like(s)</h3>
+            <button id="like-1" class="like" onclick="addLikes1(this)">
+              Like
+            </button>
+          </div>
+          <div class="post-content">
+            <p>
+              I just set up this new discord bot, let me know what you all
+              think. <a href="https://www.google.com/" target="_blank">link</a>
+            </p>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-header">
+            <h2 class="feed-names">Nichole K</h2>
+            <h3 id="like-count-2" class="like-count">12 like(s)</h3>
+            <button id="like-2" class="like" onclick="addLikes2(this)">
+              Like
+            </button>
+          </div>
+          <div class="post-content">
+            <p>
+              Just finished my
+              <a href="https://www.google.com/" target="_blank">next comic</a>,
+              check it out.
+            </p>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-header">
+            <h2 class="feed-names">Jim R</h2>
+            <h3 id="like-count-3" class="like-count">9 like(s)</h3>
+            <button id="like-3" class="like" onclick="addLikes3(this)">
+              Like
+            </button>
+          </div>
+          <div class="post-content">
+            <p>
+              I can't stop listening to the
+              <a href="https://www.google.com/" target="_blank">new album</a>.
+            </p>
+            <p>Who else is liking it?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

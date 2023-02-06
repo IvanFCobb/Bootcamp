@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <h1>Registration Form</h1>
+  <body>
+    <form action="">
+      <div>
+        <label>First Name:*<input type="text" /></label>
+      </div>
+      <div>
+        <label>Last Name:*<input type="text" /></label>
+      </div>
+      <div>
+        <label>Email Address<input type="email" /></label>
+      </div>
+      <div>
+        <label>Password:*<input type="password" /></label>
+      </div>
+      <div>
+        <label>Confirm Password:*<input type="password" /></label>
+      </div>
+      <div>
+        <label>Birthday:<input type="date" /></label>
+      </div>
+      <div>
+        <label>Gender Identity:</label>
+      </div>
+      <div>
+        <label><input type="radio" id="Male" name="gender" />Male</label
+        ><label><input type="radio" id="Female" name="gender" />Female</label
+        ><label
+          ><input type="radio" id="Non-Binary" name="gender" />Non-Binary</label
+        ><label
+          ><input type="radio" id="NA" name="gender" checked />I prefer not to
+          answer</label
+        >
+      </div>
+      <div><label for="">A short description about myself:</label></div>
+      <div><textarea></textarea></div>
+      <div>
+        <label for="favorite"
+          >Favorite Language:<select id="favorite" name="favorite">
+            <option value="0">Javascript</option>
+            <option value="1">Python</option>
+          </select></label
+        >
+      </div>
+      <div>
+        <label
+          ><input type="checkbox" />Yes, I would like to receive periodic email
+          updates.</label
+        >
+      </div>
+      <div>
+        <input type="submit" value="Create Account" />
+      </div>
+      <div><p>* indicates a required field</p></div>
+    </form>
+  </body>
+</html>

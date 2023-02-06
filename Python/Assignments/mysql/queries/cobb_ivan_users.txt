@@ -1,0 +1,13 @@
+SELECT * 
+FROM users;
+
+INSERT INTO users (id, first_name, last_name, email, created_at, updated_at) 
+VALUES(1, "john", "doe", "jdoe@dojo.com", now(), now());
+
+INSERT INTO users (id, first_name, last_name, email, created_at, updated_at) 
+VALUES(2, "jane", "doe", "jadoe@dojo.com", now(), now());
+
+INSERT INTO users (id, first_name, last_name, email, created_at, updated_at) 
+VALUES(3, "jack", "smith", "jadoe@dojo.com", now(), now());
+
+UPDATE `users_schema`.`users` SET `first_name` = 'davee', `last_name` = 'grow', `email` = 'dgrow@gmail.com', `updated_at` = now() WHERE (`id` = '13');

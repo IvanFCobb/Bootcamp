@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet 2" href="static/css/style.css">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="gold-display bg-dark p-3">
+        <h3 class="gold-label text-light text-center" for="username">Your Gold:</h3>
+        <h3 class="gold-amount text-light">{{session['totalGold']}}</h3>
+    </div>
+    <div class="location-container">
+        <div class="location-content pl-5 pr-5 pb-5 pt-3 bg-dark">
+            <h3 class="text-center text-warning">Farm</h1>
+            <form class="form-box" action="/process_money" method="post">
+                <input type="hidden" name="which_activity" value="Farm" />
+                <label class="text-light mb-1" for="username">(earns 10-20 gold)</label>
+                <input type="submit" value="Find Gold!" class="btn btn-warning mt-3">            
+                <script src="static/js/bootstrap.js"></script>
+            </form>
+        </div>
+        <div class="location-content  pl-5 pr-5 pb-5 pt-3 bg-dark">
+            <h3 class="text-center text-warning">Cave</h1>
+            <form class="form-box" action="/process_money" method="post">
+                <input type="hidden" name="which_activity" value="Cave" />
+                <label class="text-light mb-1" for="username">(earns 5-10 gold)</label>
+                <input type="submit" value="Find Gold!" class="btn btn-warning mt-3">            
+                <script src="static/js/bootstrap.js"></script>
+            </form>
+        </div>
+        <div class="location-content  pl-5 pr-5 pb-5 pt-3 bg-dark">
+            <h3 class="text-center text-warning">House</h1>
+            <form class="form-box" action="/process_money" method="post">
+                <input type="hidden" name="which_activity" value="House" />
+                <label class="text-light mb-1" for="username">(earns 2-5 gold)</label>
+                <input type="submit" value="Find Gold!" class="btn btn-warning mt-3">            
+                <script src="static/js/bootstrap.js"></script>
+            </form>
+        </div>
+        <div class="location-content bg-dark">
+            <h3 class="text-center text-warning">Casino</h1>
+            <form class="form-box" action="/process_money" method="post">
+                <input type="hidden" name="which_activity" value="Casino" />
+                <label class="text-light mb-1" for="username">(earns/takes 0-50 gold)</label>
+                <input type="submit" value="Find Gold!" class="btn btn-warning mt-3">            
+                <script src="static/js/bootstrap.js"></script>
+            </form>
+        </div>
+    </div>
+    <h3>Activities:</h3>
+    <div class="activities">
+        {{session['activityLog']|safe}}
+    </div>
+    {{session['winMessage']|safe}}
+    {{session['resetButton']|safe}}
+</body>
+</html>

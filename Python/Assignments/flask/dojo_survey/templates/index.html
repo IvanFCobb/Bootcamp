@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet 2" href="static/css/style.css">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="content container pl-5 pr-5 pb-5 bg-dark">
+        <h1 class="text-center text-warning">Dojo Survey</h1>
+        <form action="/data" method="post">
+            <label class="text-light mb-1" for="username">Name:</label>
+            <input class="form-control m-1" type="text" name="username">
+            <label class="text-light mb-1" for="location">Dojo Location:</label>
+            <select class="form-control mb-2" name="location">
+                <option value="Chicago">Chicago</option>
+                <option value="Seatle">Seatle</option>
+                <option value="Jose">San Jose</option>
+                <option value="Online">Online</option>
+            </select>
+            <label class="text-light mb-1" for="language">Favorite Language:</label>
+            <select class="form-control mb-2" name="language">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+            </select>
+            <label class="text-light mb-1" for="comments">Comments:</label>
+            <textarea name="comments" id="comments" cols="60" rows="6"></textarea>
+            <input type="submit" value="Submit" class="btn btn-warning text-center mt-3">            
+            <script src="static/js/bootstrap.js"></script>
+        </form>
+    </div>
+</body>
+</html>

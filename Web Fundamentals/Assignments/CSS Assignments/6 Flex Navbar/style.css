@@ -1,0 +1,35 @@
+.nav{
+    display: flex;
+    width: 100%;
+    background-color: rgb(82, 82, 82);
+}
+.btn{
+    background-color: aqua;
+    color: white;
+    margin-right: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+.nav-links{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+.nav-title{
+    color: white;
+    font-family: white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+a{
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-family: roboto;
+}
+.active{
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      img {
+        max-width: 200px;
+      }
+      .icon {
+        max-width: 40px;
+        cursor: pointer;
+      }
+      a {
+        cursor: pointer;
+      }
+      th {
+        border: 1px solid black;
+      }
+      tr {
+        border: 1px solid black;
+      }
+      td {
+        border: 1px solid black;
+      }
+      .project {
+        border: 1px solid black;
+        border-radius: 2px;
+        width: 70px;
+      }
+      .projectImg {
+        display: inline-block;
+        cursor: pointer;
+      }
+      form {
+        max-width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ivan Cobb</h1>
+    <img src="ProfilePic.png" alt="Profile Picture" />
+    <div>
+      <a href="https://github.com/IvanFCobb/Bootcamp-Public" target="_blank"
+        ><img class="icon" src="GitHubIcon.png" alt="GitHub Link " />My GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/ivan-cobb-9376b3126" target="_blank"
+        ><img class="icon" src="LinkedInIcon.png" alt="LinkedIn link " />My
+        LinkedIn
+      </a>
+      <a href="IvanFCobb@gmail.com" target="_blank"
+        ><img class="icon" src="GmailIcon.png" alt="Email Link " />My Email
+      </a>
+    </div>
+    <h2>Technologies</h2>
+    <table>
+      <tr>
+        <th>Placeholder</th>
+        <th>Placeholder</th>
+        <th>Placeholder</th>
+        <th>Placeholder</th>
+      </tr>
+      <tr>
+        <td>Placeholder</td>
+        <td>Placeholder</td>
+        <td>Placeholder</td>
+        <td>Placeholder</td>
+      </tr>
+      <tr>
+        <td>Placeholder</td>
+        <td>Placeholder</td>
+        <td>Placeholder</td>
+        <td>Placeholder</td>
+      </tr>
+      <tr>
+        <td>Placeholder</td>
+        <td>Placeholder</td>
+        <td>Placeholder</td>
+        <td>Placeholder</td>
+      </tr>
+    </table>
+    <section>
+      <h2>Future Projects</h2>
+      <div class="project">
+        <img class="projectImg" src="DojoNinja.png" alt="DojoNinja" />
+      </div>
+      <p>Ninja game made with HTML/CSS/Javascript</p>
+    </section>
+    <form>
+      <h2>Contact Me</h2>
+      <fieldset>
+        <label for="name">Name: <input type="text" id="name" /></label>
+        <label for="email"
+          >Email: <input type="email" name="email" id="email"
+        /></label>
+        <label for="message"
+          >Message:
+          <textarea name="message" id="message" cols="60" rows="5"></textarea>
+        </label>
+        <input type="submit" value="Send Message" />
+      </fieldset>
+    </form>
+  </body>
+</html>

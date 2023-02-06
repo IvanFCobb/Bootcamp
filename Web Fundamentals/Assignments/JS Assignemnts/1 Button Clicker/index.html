@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Button Clicker</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="page-header">
+        <h1>Dojonary</h1>
+        <input type="text" name="search" id="search" placeholder="search.." />
+        <button class="login" type="submit" onclick="logStatus(this)">
+          Login
+        </button>
+      </div>
+      <div id="content">
+        <div id="main">
+          <div class="entry">
+            <div class="left">
+              <h2 class="word">ninja</h2>
+              <h3 class="syntax">noun</h3>
+              <h4 class="plural">plural: ninjas</h4>
+              <button
+                class="like"
+                type="submit"
+                onclick="alert('ninja was liked')"
+              >
+                13 likes
+              </button>
+            </div>
+            <div class="right">
+              <p class="deffinition">
+                A practitioner skilled in the
+                <a href="https://www.google.com/" target="_blank">Japanese</a>
+                art of
+                <a href="https://www.google.com/" target="_blank">ninjutsu</a>
+              </p>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="left">
+              <h2 class="word">ninja</h2>
+              <h3 class="syntax">noun</h3>
+              <h4 class="plural">plural: ninjas</h4>
+              <button
+                class="like"
+                type="submit"
+                onclick="alert('ninja was liked')"
+              >
+                37 likes
+              </button>
+            </div>
+            <div class="right">
+              <p class="deffinition">
+                A
+                <a href="https://www.google.com/" target="_blank">programmer</a>
+                who breaks down a problem with
+                <a href="https://www.google.com/" target="_blank">zen</a>-like
+                focus
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="side-bar">
+          <div class="define">
+            <h3>Dojonary is defined by YOU</h3>
+            <button class="add" type="submit" onclick="removeElement(this)">
+              Add Definition
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

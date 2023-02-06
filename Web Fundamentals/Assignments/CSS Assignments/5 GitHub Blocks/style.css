@@ -1,0 +1,31 @@
+.row1, .row2, .row3{
+    max-width: 360px;
+    height: 120px;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    padding-left: 10px;
+    justify-content: space-evenly;
+}
+img{
+    max-height: 100px;
+}
+.row1{
+    background-color: aqua;
+}
+.row2{
+    background-color: lightcoral;
+}
+.row3{
+    background-color: white;
+}
+.container{
+    background-color: rgb(170, 170, 170);
+    width: 380px;
+    height: 500px;
+    padding: 10px;
+    justify-items: center;
+    align-items: center;
+    display: block;
+    text-align: center;
+}

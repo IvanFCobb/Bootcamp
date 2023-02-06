@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet 2" href="static/css/style.css">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="content container pl-5 pr-5 pb-5 bg-dark">
+        <h1 class="text-center text-warning">{{session['userName']}}</h1>
+        <h3 class="text-light">{{session['userLocation']}}</h3>
+        <h3 class="text-light">{{session['userLanguage']}}</h3>
+        <p class="bg-light text-wrap">{{session['userComments']}}</p>
+        <a class="btn btn-primary text-center mt-3" href="/">Home</a> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <title>HTML Table</title>
+</head>
+<body>
+    <table class="table table-hover table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Full Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr class="table-warning"> 
+                <td>{{user['first_name']}}</td> 
+                <td>{{user['last_name']}} </td>
+                <td> {{user['first_name']}} {{user['last_name']}}</td>
+            </tr>
+            {% endfor %}   
+        </tbody>     
+    </table>
+    <script src="static/js/bootstrap.js"></script>
+</body>
+</html>

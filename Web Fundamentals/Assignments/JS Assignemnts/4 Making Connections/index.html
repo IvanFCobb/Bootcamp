@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <div class="page-header">
+      <div class="header-links">
+        <h2 class="profile">Profile</h2>
+      </div>
+      <a class="home">Home</a>
+      <a class="my-profile">My Profile</a>
+      <a class="connections">Find Connections</a>
+      <button class="sign-out">Sign Out</button>
+    </div>
+    <div class="content">
+      <div class="main">
+        <div class="user-card">
+          <div class="card-header">
+            <img
+              class="profile-pic"
+              src="images/jane-m.jpg"
+              alt="user-circle"
+            />
+          </div>
+          <div class="card-footer">
+            <h2 id="user-name" class="user-name">Jane Doe</h2>
+            <p class="map-text">
+              <img class="map" src="icons/map-marker.png" alt="map-marker" />
+              Seattle
+            </p>
+            <p class="about-me">Developer | Engineer | Problem Solver</p>
+            <p class="about-me">Master of shadows and the internet!</p>
+            <p class="edit">
+              <a class="edit-profile" onclick="changeName()">
+                <img class="gear" src="icons/gear.png" alt="gear" />
+                edit profile</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="history-card">
+          <div class="history-header"><h3 class="edu">Education</h3></div>
+          <div class="history-footer">
+            <h4 class="history-item">Coding Dojo - Web Fundementals:</h4>
+            <p class="date">September 2022 -April 2023</p>
+            <p class="description">Triple black belt in Html, Css, Java</p>
+          </div>
+        </div>
+      </div>
+      <div class="side-bar">
+        <div class="side-card">
+          <div class="side-header">
+            <div id="request-number">
+              <h4 id="request-number2" class="request-number">2</h4>
+            </div>
+            <h3 class="request">Connection Requests</h3>
+          </div>
+          <div class="request-footer">
+            <div id="user1" class="side-row">
+              <a
+                ><img
+                  class="user-pic"
+                  src="images/todd-s.jpg"
+                  alt="Picture of todd" /></a
+              ><a class="connect-name"> <h5 class="connect-name">Todd E</h5></a>
+              <a
+                class="accept"
+                onclick="removeUser(0),addConnection(),removeRequest()"
+                ><img
+                  class="accept"
+                  src="icons/accept-circle.png"
+                  alt="accept-circle" /></a
+              ><a class="accept" onclick="removeUser(0),removeRequest()"
+                ><img
+                  class="accept"
+                  src="icons/close-circle.png"
+                  alt="close-circle"
+                />
+              </a>
+            </div>
+            <div id="user2" class="side-row">
+              <a
+                ><img
+                  class="user-pic"
+                  src="images/phil-s.jpg"
+                  alt="Picture of todd" /></a
+              ><a class="connect-name"> <h5 class="connect-name">Phil K</h5></a>
+              <a
+                class="accept"
+                onclick="removeUser(1),addConnection(),removeRequest()"
+                ><img
+                  class="accept"
+                  src="icons/accept-circle.png"
+                  alt="accept-circle" /></a
+              ><a class="accept" onclick="removeUser(1),removeRequest()"
+                ><img
+                  class="accept"
+                  src="icons/close-circle.png"
+                  alt="close-circle"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="side-card">
+          <div class="side-header">
+            <div id="connect-num-circ">
+              <h4 id="connect-number" class="connect-number">500+</h4>
+            </div>
+            <h3 class="connect">Your Connections</h3>
+          </div>
+          <div class="connect-body">
+            <div class="side-row">
+              <a
+                ><img
+                  class="user-pic"
+                  src="images/adrien-s.jpg"
+                  alt="Picture of todd" /></a
+              ><a class="connect-name">
+                <h5 class="connect-name">Adrien D</h5></a
+              >
+            </div>
+            <div class="side-row">
+              <a
+                ><img
+                  class="user-pic"
+                  src="images/anne-s.jpg"
+                  alt="Picture of todd" /></a
+              ><a class="connect-name"> <h5 class="connect-name">Anne J</h5></a>
+            </div>
+            <div class="side-row">
+              <a
+                ><img
+                  class="user-pic"
+                  src="images/alayne-s.jpg"
+                  alt="Picture of todd" /></a
+              ><a class="connect-name">
+                <h5 class="connect-name">Alayne T</h5></a
+              >
+            </div>
+            <div class="side-row">
+              <a
+                ><img
+                  class="user-pic"
+                  src="images/arry-s.jpg"
+                  alt="Picture of todd" /></a
+              ><a class="connect-name"> <h5 class="connect-name">Arry Y</h5></a>
+            </div>
+            <div class="side-row">
+              <a
+                ><img
+                  class="user-pic"
+                  src="images/todd-s.jpg"
+                  alt="Picture of todd" /></a
+              ><a class="connect-name"> <h5 class="connect-name">Todd E</h5></a>
+            </div>
+          </div>
+        </div>
+        <div class="connect-footer">
+          <div class="side-row">
+            <a>View More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

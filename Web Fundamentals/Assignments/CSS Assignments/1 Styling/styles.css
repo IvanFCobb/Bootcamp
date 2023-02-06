@@ -1,0 +1,27 @@
+*{
+    max-width: 600px;
+    font-family: cursive;
+}
+h1  {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+span{
+    color: hsl(186, 100%, 69%);
+}
+h2 {
+    background-color: rebeccapurple;
+    color: white;
+    text-align: center;
+    font-family: serif;
+    font-size: x-large;
+}
+h3 {
+    background-color: lightblue;
+    text-decoration: underline;
+    text-align: right;
+    font-family: serif;
+    padding: 10px;
+}

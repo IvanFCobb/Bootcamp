@@ -1,0 +1,26 @@
+#ocean {
+background-image: url("ocean1.jpg");
+width: 900px;
+height: 700px;
+}
+
+.player {
+    position: absolute;
+    width: 70px;
+    height: 75px;
+    background-image: url("player.png");
+}
+
+.enemies {
+    position: absolute;
+    width: 70px;
+    height: 75px;
+    background-image: url("enemy.png");
+}
+
+.missiles {
+    position: absolute;
+    background-color: green;
+    width: 3px;
+    height: 12px;
+}

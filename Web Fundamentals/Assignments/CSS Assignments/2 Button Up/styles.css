@@ -1,0 +1,29 @@
+.search{
+    background-color: rgba(255, 255, 255, 0.894);
+    height: 20px;
+    width: 100px;
+    border: 2px solid rgb(28, 175, 180);
+    border-radius: 10px;
+    color: rgb(28, 175, 180);  
+    font-size: .6em ; 
+    font-weight: bolder;
+}
+.plus{
+    background-color: rgb(31, 227, 190);
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    color: white;
+    border:  rgb(31, 227, 178);
+    font-size: 1em;
+
+}
+.account{
+    background-color: rgb(49, 122, 190);
+    color: rgb(203, 203, 203);
+    width: 120px;
+    box-shadow: 2px 2px 3px black;
+}
+div{
+    margin: 10px;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dojo Weather</title>
+  </head>
+  <body>
+    <!--Navigation bar for the page-->
+    <div id="nav-bar">
+      <h1 id="page-title">DojoWeather</h1>
+      <h2 class="locations" onclick="alert('loading weather report...')">
+        Burbank
+      </h2>
+      <h2 class="locations" onclick="alert('loading weather report...')">
+        Chicago
+      </h2>
+      <h2 class="locations" onclick="alert('loading weather report...')">
+        Dallas
+      </h2>
+    </div>
+
+    <!--container for the main contnent of the page-->
+    <div id="page-content">
+      <div id="current-location">
+        <h2>San Jose</h2>
+        <span id="unit-select">show temperature in</span
+        ><select name="unit" id="unit" onChange="convertUnits()">
+          <option value="celcius">&#176;C</option>
+          <option value="fahrenheit">&#176;F</option>
+        </select>
+      </div>
+
+      <!--Days of the week weather cards-->
+      <div id="day-forecast">
+        <div class="day-card">
+          <h2 class="day">Today</h2>
+          <img class="symbol" src="assets/some_rain.png" alt="some rain" />
+          <span> Some Rain </span>
+          <div class="day-temp">
+            <h3 id="day1-high" class="day-temp-high">24</h3>
+            <h3 class="day-temp-highD">&#176;</h3>
+            <h3 id="day1-low" class="day-temp-low">18</h3>
+            <h3 class="day-temp-highL">&#176;</h3>
+          </div>
+        </div>
+        <div class="day-card">
+          <h2 class="day">Tomorrow</h2>
+          <img class="symbol" src="assets/some_sun.png" alt="some sun" />
+          <span>Some Sun</span>
+          <div class="day-temp">
+            <h3 id="day2-high" class="day-temp-high">27</h3>
+            <h3 class="day-temp-highD">&#176;</h3>
+            <h3 id="day2-low" class="day-temp-low">19</h3>
+            <h3 class="day-temp-highL">&#176;</h3>
+          </div>
+        </div>
+        <div class="day-card">
+          <h2 class="day">Friday</h2>
+          <img
+            class="symbol"
+            src="assets/some_clouds.png"
+            alt="some Clouds"
+          /><span>Some Clouds</span>
+          <div class="day-temp">
+            <h3 id="day3-high" class="day-temp-high">21</h3>
+            <h3 class="day-temp-highD">&#176;</h3>
+            <h3 id="day3-low" class="day-temp-low">16</h3>
+            <h3 class="day-temp-highL">&#176;</h3>
+          </div>
+        </div>
+        <div class="day-card">
+          <h2 class="day">Saturday</h2>
+          <img class="symbol" src="assets/some_sun.png" alt="some sun" />
+          <span>Some Sun </span>
+          <div class="day-temp">
+            <h3 id="day4-high" class="day-temp-high">26</h3>
+            <h3 class="day-temp-highD">&#176;</h3>
+            <h3 id="day4-low" class="day-temp-low">21</h3>
+            <h3 class="day-temp-highL">&#176;</h3>
+          </div>
+        </div>
+      </div>
+
+      <!--pop up cookie disclaimer-->
+      <div id="cookie-time">
+        <img class="cookie" src="assets/cookie.png" alt="" />
+        <div class="cookie-message">
+          <h2>Stop! Cookie time</h2>
+          <p>
+            We use cookies (sadly not the edible ones) to personalize content
+            and ads, to provide social media features and to analyse our
+            traffic.
+            <a href="">Read more...</a>
+          </p>
+        </div>
+        <button class="accept" onclick="removeElement('#cookie-time')">
+          I Accept
+        </button>
+      </div>
+    </div>
+
+    <!--Javascript link-->
+    <script src="script.js"></script>
+  </body>
+</html>
