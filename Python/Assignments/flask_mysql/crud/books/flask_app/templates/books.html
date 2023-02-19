@@ -20,16 +20,14 @@
       </div>
       <div class="row">
         <div class="col">
-          <form
-            class="form d-flex w-75 align-items-center"
-            action="/create_book"
-            method="POST"
-          >
-            <label for="title">title:</label>
+          <form class="form w-75" action="/create_book" method="POST">
+            <label for="title">Title:</label>
+            <input class="form-control m-2" type="text" name="title" required />
+            <label for="num_of_pages">Number of Pages:</label>
             <input
               class="form-control m-2"
               type="text"
-              title="title"
+              name="num_of_pages"
               required
             />
             <div class="form-group">
@@ -38,14 +36,27 @@
           </form>
         </div>
         <div class="col">
-          <div class="borderer">
-            {% for one_book in all_books %}
-            <a class="book_links" href="/books/{{one_book.id}}"
-              >{{one_book.title}}</a
-            ><br />
-            {% endfor %}
-          </div>
-          <a class="btn btn-primary mt-1" href="/new">New Author</a>
+          <table class="table">
+            <thead>
+              <th scope="col">Title</th>
+              <th scope="col">Number of Pages</th>
+            </thead>
+            <tbody>
+              {% for one_book in all_books %}
+              <tr>
+                <td>
+                  <a class="book_links" href="/books/{{one_book.id}}"
+                    >{{one_book.title}}</a
+                  >
+                </td>
+                <td>
+                  <span>{{one_book.num_of_pages}}</span>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <a class="btn btn-primary mt-1" href="/authors">All Authors</a>
         </div>
       </div>
     </div>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet 2" href="/static/css/style.css" />
+    <title>Author</title>
+  </head>
+  <body>
+    <div class="comtainer">
+      <div class="row">
+        <div class="col-md-4">
+          <h1 class="header text-capitalize mb-3">
+            {{author.name}}'s Favorite
+          </h1>
+          {% for author in author.books_who_favorited %}
+          <p>{{author.title}}</p>
+          {% endfor %}
+        </div>
+        <div class="col-md-4">
+          <h1 class="header text-capitalize mb-3">Add Authors Favorite</h1>
+          <form class="form" action="/join/book" method="POST">
+            <label for="book">Books:</label>
+            <input type="hidden" name="author_id" value="{{author.id}}" />
+            <select class="form-control" name="book_id" required>
+              {% for book in unfavorited_books %}
+              <option value="{{book.id}}">{{book.title}}</option>
+              {% endfor %}
+            </select>
+            <input
+              class="form-control btn btn-primary mt-3"
+              type="submit"
+              value="Update"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-primary mt-1" href="/authors">All Authors</a>
+  </body>
+</html>
