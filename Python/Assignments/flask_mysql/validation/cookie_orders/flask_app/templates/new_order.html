@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet 2" href="/static/css/style.css" />
+    <title>New Orders</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Log a New Order</h1>
+        </div>
+        <div class="col">
+          <a href="/orders">Back to Orders</a>
+        </div>
+      <div class="row">
+        <div class="col-md-4">
+          <form class="form" action="/create_order" method="POST">
+            <div class="mb-3">
+              <label for="customer_name" class="form-label">Customer Name</label>
+              <input type="text" class="form-control" name="customer_name" required>
+            </div>
+            <div class="mb-3">
+              <label for="cookie_type" class="form-label">Cookie Type</label>
+              <input type="text" class="form-control" name="cookie_type" required>
+            </div>
+            <div class="mb-3">
+              <label for="num_of_boxes" class="form-label">Number of Boxes</label>
+              <input type="number" class="form-control" name="num_of_boxes" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+      {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+      {% if messages %}                            <!-- check if there are any messages -->
+          {% for message in messages %}            <!-- loop through the messages -->
+              <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+          {% endfor %}
+      {% endif %}
+  {% endwith %}
+  </body>
+</html>

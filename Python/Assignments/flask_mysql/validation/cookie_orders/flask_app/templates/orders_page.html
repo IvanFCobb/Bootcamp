@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet 2" href="/static/css/style.css" />
+    <title>Cookie Orders</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class=" mb-5">Cookie Orders</h1>
+      <div class="row">
+        <div class="d-flex justify-content-between">
+          <h3>All Orders:</h3>
+          <a href="/order/new">+ New Order</a>
+        </div>
+      </div>
+      <div class="row">
+          <table class="table table-bordered borderer">
+            <thead class="borderer">
+              <tr>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Cookie Type</th>
+                <th scope="col">Number of Boxes</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in all_orders %}
+              <tr>
+                <th class="col text-capitalize" scope="row">{{order.customer_name}}</th>
+                <td class="col text-capitalize">{{order.cookie_type}}</td>
+                <td class="col text-capitalize">{{order.num_of_boxes}}</td>
+                <td class="col text-capitalize"> <a href="/order/edit/{{order.id}}">Edit</a><span>   </span><a href="/order/delete/{{order.id}}">Delete</a></td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
