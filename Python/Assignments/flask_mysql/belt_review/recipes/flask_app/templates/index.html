@@ -12,6 +12,9 @@
     <div class="comtainer">
       <div class="row">
         <div class="col-1"></div>
+        <div class="col"><h1>Recipe Share</h1></div>
+      <div class="row">
+        <div class="col-1"></div>
         <div class="col-5 bg-dark p-4 m-2">
           {% with register_messages = get_flashed_messages(with_categories=True,
           category_filter='register') %} {% if register_messages %}
@@ -51,7 +54,7 @@
               <label for="text" class="form-label text-light"
                 >Confirm Password:</label
               >
-              <input type="text" class="form-control" name="password_confirm" />
+              <input type="password" class="form-control" name="password_confirm" />
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>

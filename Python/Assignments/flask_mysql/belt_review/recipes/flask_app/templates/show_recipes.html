@@ -11,7 +11,13 @@
   <body>
     <div class="container">
       <h1 class="text-su">Welcome {{user.fname}}</h1>
-      <div class="d-flex justify-content-between"><h4>All Posted Recipes</h4><div><a class="m-3" href="/recipes/new">+ Create</a><a href="/logout">Logout</a></div></div>
+      <div class="d-flex justify-content-between">
+        <h4>All Posted Recipes</h4>
+        <div>
+          <a class="m-3" href="/recipes/new">+ Create</a
+          ><a href="/logout">Logout</a>
+        </div>
+      </div>
       <table class="table table-bordered borderer">
         <thead class="borderer">
           <tr>
@@ -26,24 +32,22 @@
           <tr>
             <th class="col text-capitalize" scope="row">{{recipe.name}}</th>
             {% if recipe.over_under == 0 %}
-              <td class="col text-capitalize">Yes</td>
+            <td class="col text-capitalize">Yes</td>
             {% elif recipe.over_under == 1 %}
-              <td class="col text-capitalize">No</td>
+            <td class="col text-capitalize">No</td>
             {% endif %}
-              <td class="col text-capitalize">{{recipe.creator.fname}}</td>
+            <td class="col text-capitalize">{{recipe.creator.fname}}</td>
             {% if recipe.creator.id == user.id %}
-              <td class="col text-capitalize">
-                <a href="/recipe/edit/{{recipe.id}}">View Recipe</a><span> |</span
-                  >
-                <a href="/recipe/edit/{{recipe.id}}">Edit</a><span> | </span
-                ><a href="/recipe/delete/{{recipe.id}}">Delete</a>
-              </td>            
-             {% elif recipe.over_under == 1 %}
-              <td class="col text-capitalize">
-                <a href="/recipe/edit/{{recipe.id}}">View Recipe</a><span> |</span
-                >
-              </td>
-              {% endif %}
+            <td class="col text-capitalize">
+              <a href="/recipes/{{recipe.id}}">View Recipe</a><span> |</span>
+              <a href="/recipes/edit/{{recipe.id}}">Edit</a><span> | </span
+              ><a href="/recipes/delete/{{recipe.id}}">Delete</a>
+            </td>
+            {% else %}
+            <td class="col text-capitalize">
+              <a href="/recipes/{{recipe.id}}">View Recipe</a><span></span>
+            </td>
+            {% endif %}
           </tr>
           {% endfor %}
         </tbody>

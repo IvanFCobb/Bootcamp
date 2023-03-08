@@ -1,5 +1,6 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 from flask_app.models import recipe
+from flask import flash
 
 
 class User:
@@ -56,3 +57,12 @@ class User:
             print(recipe_data)
         print(user)
         return user
+    
+    @staticmethod
+    def validate_email(data):
+        query = "SELECT * from users WHERE email = %(email)s;"
+        results = connectToMySQL('recipes').query_db(query, data)
+        if len(results) >= 1:
+            return True
+        else:
+            return False

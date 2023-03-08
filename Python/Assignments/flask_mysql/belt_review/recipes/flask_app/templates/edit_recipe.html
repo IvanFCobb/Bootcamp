@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/css/bootstrap.css" />
     <link rel="stylesheet 2" href="/static/css/style.css" />
-    <title>New Recipe</title>
+    <title>Edit Recipe</title>
   </head>
   <body>
     <div class="comtainer">
       <div class="row">
         <div class="col-1"></div>
-        <div class="col-5"><h1>Add a New Recipe</h1></div>
+          <div class="col-5"><h1>Edit Recipe!</h1></div>
         <div class="col-5 text-end"><a href="/recipes">back to recipes</a><a class="ms-5" href="/logout">logout</a></div>
         <div class="col-1"></div>
       </div>
@@ -27,25 +27,26 @@
             {% endfor %}
           </ul>
           {% endif %} {% endwith %}
-          <form class="form" action="/create_recipe" method="POST">
+          <form class="form" action="/edit_recipe" method="POST">
             <div class="mb-3">
               <input type="hidden" value="{{user.id}}" name="user_id">
+              <input type="hidden" value="{{recipe.id}}" name="id">
               <label for="name" class="form-label text-light"
                 >Recipe Name:</label
               >
-              <input type="text" class="form-control" name="name" required/>
+              <input type="text" class="form-control" name="name" value="{{recipe.name}}" required/>
             </div>
             <div class="mb-3">
               <label for="description" class="form-label text-light"
                 >Description:</label
               >
-              <textarea class="form-control" name="description" required></textarea>
+              <textarea class="form-control" name="description" required>{{recipe.description}}</textarea>
             </div>
             <div class="mb-3">
               <label for="instructions" class="form-label text-light"
                 >Instructions:</label
               >
-              <textarea class="form-control" name="instructions" required></textarea>
+              <textarea class="form-control" name="instructions" required>{{recipe.instructions}}</textarea>
             </div>
         </div>
         <div class="col-5 bg-dark p-4 m-2">
@@ -54,7 +55,7 @@
               <label for="date_cooked" class="form-label text-light"
                 >Date Cooked/Made</label
               >
-              <input type="date" class="form-control" name="date_cooked" required/>
+              <input type="date" class="form-control" name="date_cooked" value="{{recipe.date_cooked}}" required/>
             </div>
             <div class="mb-3">
               <select class="form-select" name="over_under" required>
